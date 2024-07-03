@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    margin-top: 20px;
+}
+
+#guru-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#guru-list li {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    margin: 10px;
+    border-radius: 5px;
+    border: 2px solid #388E3C;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#guru-list li:hover {
+    background-color: #388E3C;
+    transform: scale(1.05);
+}
+
+#timeline-container {
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.timeline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: calc(100% - 40px);
+    height: 6px;
+    background-color: #ddd;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.timeline .event {
+    position: relative;
+    text-align: center;
+    flex: 1;
+}
+
+.timeline .event .date {
+    margin-bottom: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.timeline .event .marker {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 3px solid #ddd;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline .event.current .marker {
+    background-color: #ff5722;
+    border-color: #ff5722;
+}
+
+.timeline .event .content {
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-radius: 6px;
+    position: absolute;
+    top: 50px;
+    width: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8em;
+    z-index: 2;
+}
+
+.timeline .duration {
+    margin-top: 5px;
+    font-size: 0.8em;
+    color: #555;
+}
+.logo {
+    display: block;
+    margin: 0 auto 20px; /* Pusatkan gambar dan beri jarak bawah */
+    max-width: 100px; /* Sesuaikan ukuran maksimal logo */
+    height: auto; /* Pertahankan rasio aspek logo */
+}
+
